@@ -19,10 +19,12 @@ from pages.urls import pages_patterns
 from profiles.urls import profiles_patterns
 from messenger.urls import messenger_patterns
 from django.conf import settings
+from lessons.urls import lessons_patterns
 
 urlpatterns = [
     path('', include('core.urls')),
     path('pages/', include(pages_patterns)),
+    path('lessons/', include(lessons_patterns)),
     path('admin/', admin.site.urls),
     # Paths de Auth
     path('accounts/', include('django.contrib.auth.urls')),
